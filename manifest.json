@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "dansaiko.pomodoro",
+  "name": "Pomodoro",
+  "version": "1.0.0",
+  "author": "dansaiko",
+  "description": "Pomodoro timer with a draining progress ring, live duration controls, auto do-not-disturb during focus, and daily session stats",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Pomodoro.qml"
+  },
+  "barWidget": {
+    "displayName": "Pomodoro",
+    "description": "Focus timer with progress ring and daily stats",
+    "category": "Time",
+    "allowMultiple": false,
+    "defaultSection": "center",
+    "defaults": {
+      "focusMinutes": 25,
+      "breakMinutes": 5,
+      "longBreakMinutes": 15,
+      "cycleLength": 4,
+      "autoStartBreaks": true,
+      "autoStartFocus": false,
+      "silenceNotifications": true,
+      "sound": true,
+      "showIdleGlyph": true,
+      "focusEndSound": "/usr/share/sounds/freedesktop/stereo/complete.oga",
+      "breakEndSound": "/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga"
+    },
+    "schema": [
+      {
+        "key": "focusMinutes",
+        "type": "number",
+        "label": "Focus minutes"
+      },
+      {
+        "key": "breakMinutes",
+        "type": "number",
+        "label": "Break minutes"
+      },
+      {
+        "key": "longBreakMinutes",
+        "type": "number",
+        "label": "Long break minutes"
+      },
+      {
+        "key": "cycleLength",
+        "type": "number",
+        "label": "Pomodoros per long break"
+      },
+      {
+        "key": "autoStartBreaks",
+        "type": "boolean",
+        "label": "Auto-start breaks"
+      },
+      {
+        "key": "autoStartFocus",
+        "type": "boolean",
+        "label": "Auto-start focus"
+      },
+      {
+        "key": "silenceNotifications",
+        "type": "boolean",
+        "label": "Do not disturb while focusing"
+      },
+      {
+        "key": "sound",
+        "type": "boolean",
+        "label": "Play a sound on phase change"
+      },
+      {
+        "key": "showIdleGlyph",
+        "type": "boolean",
+        "label": "Show an icon when the timer is idle"
+      },
+      {
+        "key": "focusEndSound",
+        "type": "string",
+        "label": "Sound when focus ends"
+      },
+      {
+        "key": "breakEndSound",
+        "type": "string",
+        "label": "Sound when a break ends"
+      }
+    ]
+  }
+}
